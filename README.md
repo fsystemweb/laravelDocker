@@ -23,3 +23,7 @@
 # Template from
 
     - https://startbootstrap.com/
+
+# Email Server
+
+    - https://hub.docker.com/r/eaudeweb/mailtrap (user: mailtrap pass: mailtrap )

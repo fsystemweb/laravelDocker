@@ -10,6 +10,7 @@ services:
     command: php artisan serve --host=0.0.0.0
     links:
       - "mariadb"
+      - "mailtrap"
 
   mariadb:
     image: mariadb:10.2
@@ -26,6 +27,11 @@ services:
     restart: always
     ports:
       - 8080:8080
+
+  mailtrap:
+    image: "eaudeweb/mailtrap"
+    ports:
+      - "8081:80"
 
 volumes:
   mysql-data:
