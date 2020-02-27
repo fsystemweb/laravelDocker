@@ -8,3 +8,24 @@ services:
     volumes:
       - ./:/app
     command: php artisan serve --host=0.0.0.0
+    links:
+      - "mariadb"
+
+  mariadb:
+    image: mariadb:10.2
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: laravelDocker
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  mysql-data:

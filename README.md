@@ -14,6 +14,12 @@
 # Docker useful commands
 
     - See all the images -> 'docker images'.
+    - See all the container -> 'docker ps'.
     - Delete image -> 'docker rmi <id>'.
     - Delete all images -> 'docker system prune -a'.
     - Stop image -> 'docker stop <my_container>'
+    - Connect to console of container 'docker-compose exec <service> bash'.
+
+# Template from
+
+    - https://startbootstrap.com/
